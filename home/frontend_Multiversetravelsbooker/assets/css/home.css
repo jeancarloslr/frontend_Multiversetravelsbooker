@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../img/background-pages.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    position: fixed;
+    left: 5%;
+    right: 5%;
+    top: 17px;
+    margin: auto;
+    width: 80%;
+    height: 65px;
+    background-color: rgb(11, 11, 11);
+    margin: auto;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header p{
+    font: normal 700 1.7rem 'Open Sans';
+    padding-left: 15px;
+    color: #50B741;
+}
+
+#icon-hamburguer{
+    color: #50B741;
+    font-size: 50px;
+    padding-right: 15px;
+    z-index: 1001;
+}
+
+#icon-hamburguer:hover{
+    cursor: pointer;
+}
+
+.menu{
+    position: fixed;
+    width: 0;
+    height: 100%;
+    background-color: rgb(11, 11, 11);
+    top: 0px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    visibility: hidden;
+    transition: .4s;
+    overflow-x: hidden;
+}
+
+.active{
+    visibility: visible;  
+    width: 100%;
+    z-index: 1000;
+}  
+
+ul{
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 120px;
+}
+
+li a{
+    text-decoration: none;
+    font: normal 600 1.2rem 'Open Sans', sans-serif;
+    width: 50px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.buttons{
+    height: 20%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.cadastro_home, .login_home{
+    background-color: rgb(11, 11, 11);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: solid 2px rgb(27, 26, 26);
+    transition: .4s;
+}
+
+.cadastro_home:hover, .login_home:hover{
+    background-color: #50B741;
+
+}
+
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding-top: 75px;
+}
+
+
+.info{
+    padding-top: 50px; 
+    z-index: -1;
+
+}
+
+.info h1{
+    font: normal 700 2.3rem 'Open Sans', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    width: 300px;
+    padding-bottom: 15px;
+}
+
+strong{
+    color: #61C741;
+    filter: drop-shadow(0 0 5px #7bff52);
+}
+
+.btn-Saiba_Mais{
+    background-color: rgb(11, 11, 11);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: solid 2px rgb(27, 26, 26);
+    transition: .4s;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: .4s;
+}
+
+.btn-Saiba_Mais:hover{
+    background-color: #50B741;
+}
+
+.container-img{
+    width: 350px;
+    height: 320px;
+    position: relative;
+    bottom: 30px;
+}
+
+.container-img img{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    right: 40px;
+    z-index: -1;
+}
+
+@media (min-width: 992px){
+    header{
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+    }
+
+    #icon-hamburguer{
+        display: none;
+    }
+
+    .menu{
+        position: static; /* Alteração aqui para fluxo normal de documento */
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        visibility: visible;
+        transition: .0s;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        gap: 45px;
+        padding-top: 0;
+    }
+
+    .buttons{
+        flex-direction: row;
+        gap: 20px;
+        padding: 0;
+    }
+    
+    .cadastro_home, .login_home{
+        border-radius: 10; /* Remove a borda arredondada quando expandido */
+        border: none;
+        padding: 10px 20px;
+        transition: .4s;
+    }
+
+    .content{
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 200px;
+        height: 650px;
+        position: relative;
+        bottom: 50px;
+    }
+    .info h1{
+        font-size: 4rem;
+        width: 205px;
+        padding-right: 50px;
+    }
+
+    .container-img{
+        height: 500px;
+        width: 715px;
+    }
+
+}
+
+
+
